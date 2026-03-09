@@ -1,61 +1,66 @@
 import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 
 const navLinks = [
-  { label: "Home", href: "#home" },
-  { label: "Our Story", href: "#story" },
-  { label: "Collection", href: "#collection" },
-  { label: "Craftsmanship", href: "#craftsmanship" },
-  { label: "Visit Us", href: "#visit" },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", to: "/" },
+  { label: "Our Story", to: "/our-story" },
+  { label: "Collection", to: "/collection" },
+  { label: "Craftsmanship", to: "/craftsmanship" },
+  { label: "Our Store", to: "/store" },
+  { label: "Trust", to: "/trust" },
+  { label: "Visit Us", to: "/visit" },
+  { label: "Contact", to: "/contact" },
 ];
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const location = useLocation();
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-border">
       <div className="container mx-auto flex items-center justify-between py-3 px-4 md:px-8">
-        <a href="#home" className="font-display text-xl md:text-2xl font-bold text-primary tracking-wide">
+        <Link to="/" className="font-display text-xl md:text-2xl font-bold text-primary tracking-wide">
           Tuljaram Saraf
-        </a>
+        </Link>
         
-        {/* Desktop nav */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden lg:flex items-center gap-6">
           {navLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className="font-accent text-sm tracking-widest uppercase text-foreground/80 hover:text-primary transition-colors duration-300"
+            <Link
+              key={link.to}
+              to={link.to}
+              className={`font-accent text-xs tracking-widest uppercase transition-colors duration-300 ${
+                location.pathname === link.to ? "text-primary font-semibold" : "text-foreground/80 hover:text-primary"
+              }`}
             >
               {link.label}
-            </a>
+            </Link>
           ))}
         </div>
 
-        {/* Mobile toggle */}
         <button
           onClick={() => setOpen(!open)}
-          className="md:hidden text-foreground"
+          className="lg:hidden text-foreground"
           aria-label="Toggle menu"
         >
           {open ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
 
-      {/* Mobile menu */}
       {open && (
-        <div className="md:hidden bg-background border-b border-border animate-fade-in">
+        <div className="lg:hidden bg-background border-b border-border animate-fade-in">
           <div className="flex flex-col items-center gap-4 py-6">
             {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
+              <Link
+                key={link.to}
+                to={link.to}
                 onClick={() => setOpen(false)}
-                className="font-accent text-sm tracking-widest uppercase text-foreground/80 hover:text-primary transition-colors"
+                className={`font-accent text-sm tracking-widest uppercase transition-colors ${
+                  location.pathname === link.to ? "text-primary font-semibold" : "text-foreground/80 hover:text-primary"
+                }`}
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
           </div>
         </div>
