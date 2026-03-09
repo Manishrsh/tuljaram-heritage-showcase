@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Instagram, Facebook, Phone, MapPin } from "lucide-react";
 
 const Footer = () => {
@@ -25,10 +26,16 @@ const Footer = () => {
           <div>
             <h4 className="font-display text-lg font-semibold text-primary-foreground mb-4">Quick Links</h4>
             <div className="flex flex-col gap-3">
-              {["Home", "Our Story", "Collection", "Craftsmanship", "Visit Us"].map((link) => (
-                <a key={link} href={`#${link.toLowerCase().replace(/\s/g, '')}`} className="font-body text-sm text-primary-foreground/60 hover:text-gold transition-colors">
-                  {link}
-                </a>
+              {[
+                { label: "Home", to: "/" },
+                { label: "Our Story", to: "/our-story" },
+                { label: "Collection", to: "/collection" },
+                { label: "Craftsmanship", to: "/craftsmanship" },
+                { label: "Visit Us", to: "/visit" },
+              ].map((link) => (
+                <Link key={link.to} to={link.to} className="font-body text-sm text-primary-foreground/60 hover:text-gold transition-colors">
+                  {link.label}
+                </Link>
               ))}
             </div>
           </div>

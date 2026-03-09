@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import heroImg from "@/assets/hero-jewelry.jpg";
 
 const HeroSection = () => {
@@ -25,12 +26,12 @@ const HeroSection = () => {
           A trusted name in traditional Maharashtrian jewelry, serving the families of Ichalkaranji with heritage, purity, and timeless craftsmanship.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in" style={{ animationDelay: '1.2s', opacity: 0 }}>
-          <a href="#collection" className="gold-gradient text-foreground font-accent text-sm tracking-widest uppercase px-8 py-4 hover:opacity-90 transition-opacity">
+          <Link to="/collection" className="gold-gradient text-foreground font-accent text-sm tracking-widest uppercase px-8 py-4 hover:opacity-90 transition-opacity">
             View Collection
-          </a>
-          <a href="#visit" className="border border-gold text-gold-light font-accent text-sm tracking-widest uppercase px-8 py-4 hover:bg-gold/10 transition-colors">
+          </Link>
+          <Link to="/visit" className="border border-gold text-gold-light font-accent text-sm tracking-widest uppercase px-8 py-4 hover:bg-gold/10 transition-colors">
             Visit Our Store
-          </a>
+          </Link>
         </div>
       </div>
     </section>
