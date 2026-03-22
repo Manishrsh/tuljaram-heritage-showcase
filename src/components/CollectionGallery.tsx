@@ -1,7 +1,7 @@
 import mangalsutraImg from "@/assets/mangalsutra.jpg";
 import necklaceImg from "@/assets/necklace.jpg";
 import banglesImg from "@/assets/bangles.jpg";
-import bridalImg from "@/assets/bridal-set.jpg";
+import bridalImg from "@/assets/bridal-necklace.jpg";
 import traditionalImg from "@/assets/traditional-maharashtrian.jpg";
 import heroImg from "@/assets/hero-jewelry.jpg";
 
