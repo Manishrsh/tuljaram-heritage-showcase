@@ -8,10 +8,10 @@ const WelcomeSection = () => {
         </h2>
         <div className="section-divider mb-8" />
         <p className="font-body text-lg md:text-xl text-muted-foreground leading-relaxed mb-6">
-          Nestled in the heart of Ichalkaranji at Chhatrapati Sambhaji Maharaj Chowk, Tuljaram Saraf has been the jeweler of choice for families across generations. Our commitment to purity, tradition, and exquisite craftsmanship has made us a cornerstone of trust in the community.
+          Nestled in the heart of Ichalkaranji at Chhatrapati Sambhaji Maharaj Chowk, Tuljaram Saraf has been the jeweler of choice for families since 1911. Our commitment to purity, tradition, and exquisite craftsmanship has made us a cornerstone of trust in the community.
         </p>
         <p className="font-body text-lg md:text-xl text-muted-foreground leading-relaxed">
-          From auspicious Mangalsutras to resplendent bridal sets, every ornament we craft carries the warmth of Maharashtrian heritage and the sparkle of unmatched artistry.
+          From elegant Gold & Diamond jewelry to exquisite Kundan, Polki, Jadau, Pearl, Real Stones, and Light Weight collections — every ornament we offer carries the warmth of tradition and the sparkle of unmatched artistry.
         </p>
         
         {/* Stats */}
