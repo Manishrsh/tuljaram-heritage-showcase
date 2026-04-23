@@ -1,39 +1,76 @@
 import { Link } from "react-router-dom";
-import heroImg from "@/assets/hero-jewelry.jpg";
-import logoImg from "@/assets/logo.png";
+import heroImg from "@/assets/hero-bride-editorial.jpg";
 
 const HeroSection = () => {
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section
+      id="home"
+      className="relative min-h-[92vh] md:min-h-screen flex items-center overflow-hidden bg-foreground"
+    >
       {/* Background image */}
       <div className="absolute inset-0">
-        <img src={heroImg} alt="Traditional Gold Jewelry by Tuljaram Saraf" className="w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-b from-foreground/70 via-foreground/50 to-foreground/80" />
+        <img
+          src={heroImg}
+          alt="Tuljaram Saraf bridal jewellery editorial"
+          className="w-full h-full object-cover object-center scale-105 motion-safe:animate-[fade-in_2s_ease-out]"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-foreground/85 via-foreground/55 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-foreground/70 via-transparent to-foreground/30" />
       </div>
 
       {/* Content */}
-      <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
-        <img src={logoImg} alt="Tuljaram Saraf Logo" className="mx-auto h-24 md:h-32 mb-6 animate-fade-in" style={{ animationDelay: '0.2s', opacity: 0 }} />
-        <p className="font-accent text-sm md:text-base tracking-[0.4em] uppercase text-gold-light mb-6 animate-fade-in" style={{ animationDelay: '0.3s', opacity: 0 }}>
-          Since 1911 • Ichalkaranji
-        </p>
-        <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold text-primary-foreground leading-tight mb-6 animate-fade-in" style={{ animationDelay: '0.4s', opacity: 0 }}>
-          Tuljaram Saraf
-        </h1>
-        <div className="section-divider mb-6 animate-fade-in" style={{ animationDelay: '0.6s', opacity: 0 }} />
-        <p className="font-display text-lg md:text-2xl italic text-gold-light mb-4 animate-fade-in" style={{ animationDelay: '0.8s', opacity: 0 }}>
-          परंपरा • विश्वास • उत्कृष्टता
-        </p>
-        <p className="font-body text-base md:text-xl text-primary-foreground/80 max-w-2xl mx-auto mb-10 animate-fade-in" style={{ animationDelay: '1s', opacity: 0 }}>
-          A trusted name in fine jewelry — Gold, Diamond, Kundan, Polki, Jadau, Pearl, Real Stones & Light Weight collections — serving the families of Ichalkaranji with heritage, purity, and timeless craftsmanship.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in" style={{ animationDelay: '1.2s', opacity: 0 }}>
-          <Link to="/collection" className="gold-gradient text-foreground font-accent text-sm tracking-widest uppercase px-8 py-4 hover:opacity-90 transition-opacity">
-            View Collection
-          </Link>
-          <Link to="/visit" className="border border-gold text-gold-light font-accent text-sm tracking-widest uppercase px-8 py-4 hover:bg-gold/10 transition-colors">
-            Visit Our Store
-          </Link>
+      <div className="relative z-10 w-full">
+        <div className="container mx-auto max-w-7xl px-6 md:px-12">
+          <div className="max-w-2xl text-primary-foreground">
+            <p
+              className="font-accent text-xs md:text-sm tracking-[0.45em] uppercase text-gold-light mb-6 animate-fade-in"
+              style={{ animationDelay: "0.2s", opacity: 0, animationFillMode: "forwards" }}
+            >
+              Tuljaram Saraf · Since 1911
+            </p>
+            <h1
+              className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light leading-[1.1] mb-8 animate-fade-in"
+              style={{ animationDelay: "0.4s", opacity: 0, animationFillMode: "forwards" }}
+            >
+              Every piece carries
+              <br />
+              <span className="italic font-normal gold-text">a memory</span> —
+              <br />
+              which one will you
+              <br />
+              make your own?
+            </h1>
+            <p
+              className="font-body text-lg md:text-xl text-primary-foreground/85 leading-relaxed mb-10 max-w-xl animate-fade-in"
+              style={{ animationDelay: "0.7s", opacity: 0, animationFillMode: "forwards" }}
+            >
+              More than jewellery — a statement of you. Crafted at Chhatrapati Sambhaji
+              Maharaj Chowk, Ichalkaranji, for over a century.
+            </p>
+            <div
+              className="flex flex-col sm:flex-row gap-4 animate-fade-in"
+              style={{ animationDelay: "1s", opacity: 0, animationFillMode: "forwards" }}
+            >
+              <Link
+                to="/collection"
+                className="gold-gradient text-foreground font-accent text-sm tracking-[0.25em] uppercase px-10 py-4 hover:opacity-90 transition-opacity text-center"
+              >
+                Explore Collection
+              </Link>
+              <Link
+                to="/our-story"
+                className="border border-gold-light/70 text-gold-light font-accent text-sm tracking-[0.25em] uppercase px-10 py-4 hover:bg-gold/10 transition-colors text-center"
+              >
+                Our Heritage
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        {/* Scroll cue */}
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-2 text-gold-light/80">
+          <span className="font-accent text-[10px] tracking-[0.4em] uppercase">Scroll</span>
+          <span className="block w-px h-10 bg-gradient-to-b from-gold-light/80 to-transparent" />
         </div>
       </div>
     </section>
