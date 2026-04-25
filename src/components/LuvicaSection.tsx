@@ -36,31 +36,22 @@ const LuvicaSection = () => {
               Luvica · By Tuljaram Saraf
             </p>
             <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-light leading-tight mb-8">
-              Unveiling Elegance:
-              <br />
-              <span className="italic gold-text">Luvica</span> ✨
+              Unveiling <span className="italic gold-text">Elegance</span> ✨
             </h2>
             <div className="w-16 h-px bg-gold mb-8" />
 
             <p className="font-body text-lg md:text-xl text-primary-foreground/85 leading-relaxed mb-6">
-              Crafted with exquisite diamonds, real stones, pearls, and kundan,{" "}
-              <em className="text-gold-light">Luvica</em> unveils a world where elegance
-              meets timeless design.
-            </p>
-            <p className="font-body text-base md:text-lg text-primary-foreground/75 leading-relaxed mb-6">
-              Inspired by the harmony of tradition and modern artistry, each creation
-              reflects refined beauty and graceful sophistication. Every detail is
-              thoughtfully designed to celebrate individuality, making every piece feel
-              like a story waiting to be worn.
+              Crafted in diamonds, pearls, kundan, and fine stones —{" "}
+              <em className="text-gold-light">Luvica</em> blends timeless tradition with
+              modern grace.
             </p>
             <p className="font-display italic text-xl md:text-2xl text-gold-light mb-10">
-              "With craftsmanship so captivating and designs so unique, your heart will
-              whisper… this is just the beginning."
+              "Designs so unique, your heart will whisper… this is just the beginning."
             </p>
 
             <Link
               to="/collection"
-              className="inline-block gold-gradient text-foreground font-accent text-sm tracking-[0.3em] uppercase px-10 py-4 hover:opacity-90 transition-opacity"
+              className="inline-block bg-gold text-foreground font-accent text-sm tracking-[0.3em] uppercase px-10 py-4 hover:bg-gold-dark transition-colors"
             >
               Discover Luvica
             </Link>
