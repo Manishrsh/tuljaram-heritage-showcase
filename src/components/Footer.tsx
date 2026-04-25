@@ -10,7 +10,7 @@ const Footer = () => {
           <div>
             <h3 className="font-display text-2xl font-bold gold-text mb-4">Tuljaram Saraf</h3>
             <p className="font-body text-sm text-primary-foreground/60 leading-relaxed mb-4">
-              A heritage jewelry brand rooted in Maharashtrian tradition, trusted by families of Ichalkaranji for generations.
+              Since 1911 · Ichalkaranji
             </p>
             <div className="flex gap-4">
               <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-gold/30 flex items-center justify-center hover:bg-gold/10 transition-colors">
@@ -60,9 +60,12 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-primary-foreground/10 pt-8 text-center">
+        <div className="border-t border-primary-foreground/10 pt-8 text-center space-y-2">
           <p className="font-body text-xs text-primary-foreground/40">
             © {new Date().getFullYear()} Tuljaram Saraf Jewellers, Ichalkaranji. All rights reserved.
+          </p>
+          <p className="font-accent text-xs tracking-[0.3em] uppercase text-gold/70">
+            Website made by Social Stage
           </p>
         </div>
       </div>
