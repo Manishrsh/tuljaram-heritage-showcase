@@ -3,35 +3,75 @@ import bridalImg from "@/assets/bridal-necklace.jpg";
 import polkiImg from "@/assets/collection-polki.jpg";
 import traditionalImg from "@/assets/collection-traditional.jpg";
 import diamondImg from "@/assets/collection-diamond.jpg";
+import pearlImg from "@/assets/collection-pearl.jpg";
+import mangalsutraImg from "@/assets/mangalsutra.jpg";
+import banglesImg from "@/assets/bangles.jpg";
+import necklaceImg from "@/assets/necklace.jpg";
+import lifestyleImg from "@/assets/lifestyle-modern.jpg";
 
 const collections = [
   {
-    name: "Anaya",
-    tagline: "Bridal Heritage",
-    description:
-      "Be the bride of your dreams adorned in a masterpiece carrying generations of grace. Crafted in the finest gold with exquisite kundan and pearls, Anaya celebrates the bride within you — rooted in tradition, dressed in dreams.",
-    image: bridalImg,
-  },
-  {
-    name: "Rajashree",
-    tagline: "Maharashtra's Pride",
-    description:
-      "A regal homage to Maharashtra's timeless splendour. Three intricate layers of pure gold, each celebrating the bride you dreamt of becoming — proudly rooted in the history and legacy of the land.",
-    image: traditionalImg,
-  },
-  {
     name: "Heera",
-    tagline: "Modern Diamond",
+    tagline: "Diamond",
     description:
-      "Where contemporary brilliance meets heritage craftsmanship. Heera's solitaire stories are crafted for the woman who wears her elegance every day — refined, radiant, effortlessly hers.",
+      "Where contemporary brilliance meets heritage craftsmanship — solitaire stories for the woman who wears her elegance every day.",
     image: diamondImg,
   },
   {
     name: "Mehfil",
-    tagline: "Polki & Kundan",
+    tagline: "Kundan & Polki",
     description:
-      "Festive jewels inspired by old-world durbars. Uncut polki, lustrous kundan and delicate pearls come together in pieces that feel as poetic as the occasions they celebrate.",
+      "Festive jewels inspired by old-world durbars. Uncut polki, lustrous kundan and delicate pearls in pieces as poetic as the occasions they celebrate.",
     image: polkiImg,
+  },
+  {
+    name: "Rajashree",
+    tagline: "Maharashtrian Heritage",
+    description:
+      "A regal homage to Maharashtra's timeless splendour — Thushi, Kolhapuri Saaj, Bormaal and more, crafted in pure gold with intricate hand-detailing.",
+    image: traditionalImg,
+  },
+  {
+    name: "Anaya",
+    tagline: "Bridal Heritage",
+    description:
+      "Be the bride of your dreams adorned in a masterpiece — finest gold with exquisite kundan and pearls, rooted in tradition, dressed in dreams.",
+    image: bridalImg,
+  },
+  {
+    name: "Mangalsutra",
+    tagline: "Sacred Bond",
+    description:
+      "From classic black-bead heritage designs to modern minimalist styles — mangalsutras to be worn every day, treasured a lifetime.",
+    image: mangalsutraImg,
+  },
+  {
+    name: "Nath & Traditional Sets",
+    tagline: "The Maharashtrian Bride",
+    description:
+      "Iconic Maharashtrian Nath, paired with intricate temple-style necklaces and earrings — designed for the truly traditional bride.",
+    image: pearlImg,
+  },
+  {
+    name: "Bangles & Bracelets",
+    tagline: "Everyday Grace",
+    description:
+      "Pure gold bangles, diamond tennis bracelets and dainty everyday stacks — pieces that move with you, beautifully.",
+    image: banglesImg,
+  },
+  {
+    name: "Daily Wear",
+    tagline: "Lightweight Luxe",
+    description:
+      "Effortless lightweight gold and diamond jewellery designed for everyday — refined enough for work, elegant enough for evenings.",
+    image: lifestyleImg,
+  },
+  {
+    name: "Signature Necklaces",
+    tagline: "Statement Pieces",
+    description:
+      "From minimalist diamond pendants to elaborate jadau chokers — each necklace a curated piece of our atelier's craftsmanship.",
+    image: necklaceImg,
   },
 ];
 

@@ -53,7 +53,7 @@ const HeroSection = () => {
             >
               <Link
                 to="/collection"
-                className="gold-gradient text-foreground font-accent text-sm tracking-[0.25em] uppercase px-10 py-4 hover:opacity-90 transition-opacity text-center"
+                className="bg-gold text-foreground font-accent text-sm tracking-[0.25em] uppercase px-10 py-4 hover:bg-gold-dark transition-colors text-center"
               >
                 Explore Collection
               </Link>
@@ -67,9 +67,8 @@ const HeroSection = () => {
           </div>
         </div>
 
-        {/* Scroll cue */}
+        {/* Scroll cue line */}
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-2 text-gold-light/80">
-          <span className="font-accent text-[10px] tracking-[0.4em] uppercase">Scroll</span>
           <span className="block w-px h-10 bg-gradient-to-b from-gold-light/80 to-transparent" />
         </div>
       </div>

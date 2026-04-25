@@ -4,10 +4,6 @@ import { MapPin, Phone } from "lucide-react";
 const VisitCta = () => {
   return (
     <section className="relative section-padding bg-primary text-primary-foreground overflow-hidden">
-      <div className="absolute inset-0 opacity-10 pointer-events-none">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,hsl(var(--gold))_0%,transparent_50%)]" />
-      </div>
-
       <div className="container mx-auto max-w-4xl text-center relative">
         <p className="font-accent text-xs md:text-sm tracking-[0.45em] uppercase text-gold-light mb-6">
           Visit Our Showroom
@@ -43,7 +39,7 @@ const VisitCta = () => {
 
         <Link
           to="/visit"
-          className="inline-block gold-gradient text-foreground font-accent text-sm tracking-[0.3em] uppercase px-12 py-4 hover:opacity-90 transition-opacity"
+          className="inline-block bg-gold text-foreground font-accent text-sm tracking-[0.3em] uppercase px-12 py-4 hover:bg-gold-dark transition-colors"
         >
           Plan Your Visit
         </Link>
