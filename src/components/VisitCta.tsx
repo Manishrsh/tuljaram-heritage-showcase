@@ -9,7 +9,7 @@ const VisitCta = () => {
           Visit Our Showroom
         </p>
         <h2 className="font-display text-3xl md:text-5xl font-light leading-tight mb-8">
-          Step into a century of <span className="italic gold-text">craftsmanship</span>
+          Step into a century of <span className="italic text-gold">craftsmanship</span>
         </h2>
         <div className="section-divider mb-10" />
         <p className="font-body text-lg md:text-xl text-primary-foreground/85 leading-relaxed mb-10 max-w-2xl mx-auto">
