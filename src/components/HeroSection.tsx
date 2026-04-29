@@ -32,13 +32,13 @@ const HeroSection = () => {
               className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light leading-[1.1] mb-8 animate-fade-in"
               style={{ animationDelay: "0.4s", opacity: 0, animationFillMode: "forwards" }}
             >
-              Every piece carries
+              Every piece tells
               <br />
-              <span className="italic font-normal gold-text">a memory</span> —
+              a <span className="italic font-normal gold-text">story</span> —
               <br />
-              which one will you
+              make one yours.
               <br />
-              make your own?
+              <span className="text-2xl md:text-3xl lg:text-4xl text-gold-light/90 not-italic">115 years. Crafted. Trusted. Yours.</span>
             </h1>
             <p
               className="font-body text-lg md:text-xl text-primary-foreground/85 leading-relaxed mb-10 max-w-xl animate-fade-in"

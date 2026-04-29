@@ -9,21 +9,17 @@ const HomeIntro = () => {
           A Statement <span className="italic gold-text">of You</span>
         </h2>
         <div className="section-divider mb-10" />
-        <p className="font-body text-lg md:text-2xl text-muted-foreground leading-relaxed mb-6">
-          At Tuljaram Saraf, jewellery is more than ornament — it is heritage worn close to
-          the heart. Each piece is a quiet expression of identity, celebration and legacy,
-          designed to be lived in, loved, and one day passed on.
+        <p className="font-display italic text-xl md:text-2xl lg:text-3xl text-primary leading-relaxed mb-8">
+          “At Tuljaram Saraf, we create jewellery that becomes identity, celebration, and legacy.”
         </p>
-        <p className="font-body text-base md:text-lg text-muted-foreground/90 leading-relaxed max-w-3xl mx-auto mb-4">
-          Established in 1911 at Chhatrapati Sambhaji Maharaj Chowk, Ichalkaranji, our atelier
-          has been a symbol of trust, purity and craftsmanship for over a century. Generations
-          have walked through our doors — for first mangalsutras, bridal trousseaus, festive
-          jewels and the quiet milestones in between.
+        <p className="font-body text-base md:text-lg text-muted-foreground/90 leading-relaxed max-w-3xl mx-auto mb-6">
+          Every design is thoughtfully crafted to match your lifestyle, occasions, and
+          individuality, ensuring each piece feels as personal as it looks beautiful.
         </p>
         <p className="font-body text-base md:text-lg text-muted-foreground/90 leading-relaxed max-w-3xl mx-auto">
-          Today we offer a thoughtfully curated world of gold, diamond, real stones, pearl,
-          kundan, polki, jadau and lightweight everyday jewellery — each piece honouring the
-          legacy of our founders and the women who choose to wear them.
+          Established in 1911 at Chhatrapati Sambhaji Maharaj Chowk, Ichalkaranji, Tuljaram
+          Saraf has been a symbol of trust and tradition for generations. Our dedication to
+          purity and craftsmanship has made us a preferred choice for families over the years.
         </p>
       </div>
     </section>
