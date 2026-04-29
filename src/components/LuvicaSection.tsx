@@ -46,7 +46,7 @@ const LuvicaSection = () => {
               modern grace.
             </p>
             <p className="font-display italic text-xl md:text-2xl text-gold-light mb-10">
-              "Designs so unique, your heart will whisper… this is just the beginning."
+              Each piece is a refined expression of individuality — timeless, elegant, yours.
             </p>
 
             <Link

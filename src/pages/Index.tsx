@@ -18,10 +18,10 @@ const Index = () => {
     <Layout>
       <HeroSection />
       <HomeIntro />
+      <LuvicaSection />
       <MarqueeStrip />
       <SignatureCollections />
       <WearWithLove />
-      <LuvicaSection />
       <ReelsSection />
       <OccasionsSection />
       <HeritageStrip />
