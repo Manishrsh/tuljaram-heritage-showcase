@@ -11,7 +11,7 @@ const ContactPage = () => {
               Visit & Contact
             </p>
             <h1 className="font-display text-3xl md:text-5xl lg:text-6xl font-light text-primary mb-6">
-              Come <span className="italic gold-text">Visit Us</span>
+              Visit <span className="italic gold-text">Us</span>
             </h1>
             <div className="section-divider mb-6" />
             <p className="font-body text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -74,17 +74,7 @@ const ContactPage = () => {
           </div>
 
           {/* Contact cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-            <a href="tel:+917588267387" className="flex items-center gap-4 p-6 bg-card border border-border rounded-sm hover-lift">
-              <div className="w-14 h-14 rounded-full flex items-center justify-center bg-primary/10 shrink-0">
-                <Phone size={24} className="text-primary" />
-              </div>
-              <div>
-                <h3 className="font-display text-lg font-semibold text-foreground">Call Us</h3>
-                <p className="font-body text-base text-muted-foreground">+91 75882 67387</p>
-              </div>
-            </a>
-
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
             <a href="https://wa.me/917588267387" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 p-6 bg-card border border-border rounded-sm hover-lift">
               <div className="w-14 h-14 rounded-full flex items-center justify-center bg-festive-green/10 shrink-0">
                 <MessageCircle size={24} className="text-festive-green" />

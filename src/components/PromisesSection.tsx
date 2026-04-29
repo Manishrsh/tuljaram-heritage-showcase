@@ -55,7 +55,7 @@ const PromisesSection = () => {
                 key={p.title}
                 className="bg-background p-8 md:p-10 hover-lift group"
               >
-                <div className="w-14 h-14 rounded-full gold-gradient flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <div className="w-14 h-14 rounded-full bg-gold flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                   <Icon className="w-6 h-6 text-foreground" strokeWidth={1.5} />
                 </div>
                 <h3 className="font-display text-xl md:text-2xl text-primary mb-3">
