@@ -4,7 +4,7 @@ import MarqueeStrip from "@/components/MarqueeStrip";
 import SignatureCollections from "@/components/SignatureCollections";
 import WearWithLove from "@/components/WearWithLove";
 import LuvicaSection from "@/components/LuvicaSection";
-import OccasionsSection from "@/components/OccasionsSection";
+
 import HeritageStrip from "@/components/HeritageStrip";
 import PromisesSection from "@/components/PromisesSection";
 import ReelsSection from "@/components/ReelsSection";
@@ -23,7 +23,7 @@ const Index = () => {
       <SignatureCollections />
       <WearWithLove />
       <ReelsSection />
-      <OccasionsSection />
+      
       <HeritageStrip />
       <PromisesSection />
       <TestimonialsSection />
