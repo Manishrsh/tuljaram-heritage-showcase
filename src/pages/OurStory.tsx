@@ -2,7 +2,7 @@ import Layout from "@/components/Layout";
 import heritageImg from "@/assets/heritage-1911.jpg";
 import shopImg from "@/assets/shop-interior.jpg";
 import craftImg from "@/assets/craft-hands.jpg";
-import bridalImg from "@/assets/bridal-necklace.jpg";
+import bridalImg from "@/assets/model-traditional.jpg";
 
 const chapters = [
   {

@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import bridalImg from "@/assets/bridal-necklace.jpg";
 import polkiImg from "@/assets/collection-polki.jpg";
-import traditionalImg from "@/assets/collection-traditional.jpg";
+import traditionalImg from "@/assets/necklace-gold-pendant.jpg";
 import diamondImg from "@/assets/collection-diamond.jpg";
 import pearlImg from "@/assets/collection-pearl.jpg";
 import mangalsutraImg from "@/assets/mangalsutra.jpg";
