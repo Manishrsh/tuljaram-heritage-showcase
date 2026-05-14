@@ -1,8 +1,13 @@
 import Layout from "@/components/Layout";
 import bridalImg from "@/assets/bridal-necklace.jpg";
+import bridalDscImg from "@/assets/dsc9187.jpg";
 import diamondImg from "@/assets/collection-diamond.jpg";
+import diamondDscImg from "@/assets/dsc9410.jpg";
 import polkiImg from "@/assets/collection-polki.jpg";
-import traditionalImg from "@/assets/collection-traditional.jpg";
+import traditionalImg from "@/assets/traditional-maharashtrian.jpg";
+import maharashtrianImgOne from "@/assets/dsc9249.jpg";
+import maharashtrianImgTwo from "@/assets/dsc9263.jpg";
+import maharashtrianImgThree from "@/assets/dsc9316.jpg";
 import pearlImg from "@/assets/collection-pearl.jpg";
 import mangalsutraImg from "@/assets/mangalsutra.jpg";
 import banglesImg from "@/assets/bangles.jpg";
@@ -19,7 +24,7 @@ const sections: { id: string; eyebrow: string; title: string; description: strin
     description:
       "Curated bridal sets in fine gold, kundan, polki and diamonds — heirlooms designed to be worn, treasured, and one day passed on.",
     items: [
-      { image: bridalImg, title: "Anaya Bridal Set", subtitle: "Gold · Kundan · Pearl" },
+      { image: bridalDscImg, title: "Anaya Bridal Set", subtitle: "Gold · Kundan · Pearl" },
       { image: polkiImg, title: "Mehfil Polki Choker", subtitle: "Polki · Uncut Diamond" },
       { image: traditionalImg, title: "Rajashree Bridal", subtitle: "Maharashtrian Heritage" },
     ],
@@ -43,7 +48,7 @@ const sections: { id: string; eyebrow: string; title: string; description: strin
     description:
       "Solitaires, tennis bracelets, diamond chokers and everyday studs — radiant pieces for the woman who shines, every single day.",
     items: [
-      { image: diamondImg, title: "Heera Solitaire", subtitle: "Certified Diamond" },
+      { image: diamondDscImg, title: "Heera Solitaire", subtitle: "Certified Diamond" },
       { image: necklaceImg, title: "Diamond Necklace", subtitle: "Statement Piece" },
       { image: banglesImg, title: "Diamond Bracelet", subtitle: "Everyday Sparkle" },
     ],
@@ -67,9 +72,9 @@ const sections: { id: string; eyebrow: string; title: string; description: strin
     description:
       "Iconic Thushi, Kolhapuri Saaj, Bormaal, Nath and temple jewellery — crafted in pure gold with intricate hand-detailing.",
     items: [
-      { image: traditionalImg, title: "Kolhapuri Saaj", subtitle: "Classic Maharashtrian" },
-      { image: pearlImg, title: "Nath", subtitle: "The Maharashtrian Bride" },
-      { image: mangalsutraImg, title: "Thushi", subtitle: "Pure Gold Heritage" },
+      { image: maharashtrianImgOne, title: "Kolhapuri Saaj", subtitle: "Classic Maharashtrian" },
+      { image: maharashtrianImgTwo, title: "Nath", subtitle: "The Maharashtrian Bride" },
+      { image: maharashtrianImgThree, title: "Thushi", subtitle: "Pure Gold Heritage" },
     ],
   },
   {

@@ -2,7 +2,7 @@ import mangalsutraImg from "@/assets/mangalsutra.jpg";
 import necklaceImg from "@/assets/necklace.jpg";
 import banglesImg from "@/assets/bangles.jpg";
 import bridalImg from "@/assets/bridal-necklace.jpg";
-import traditionalImg from "@/assets/traditional-maharashtrian.jpg";
+import maharashtrianImg from "@/assets/dsc9249.jpg";
 import heroImg from "@/assets/hero-jewelry.jpg";
 import imageOne from "@/assets/reel-photo-1.jpg";
 import imageTwo from "@/assets/reel-photo-2.jpg";
@@ -15,7 +15,7 @@ const collections = [
   { image: necklaceImg, title: "Necklaces", subtitle: "Timeless Elegance", className: "col-span-1 row-span-2" },
   { image: banglesImg, title: "Bangles", subtitle: "Circle of Tradition", className: "col-span-1 row-span-1" },
   { image: bridalImg, title: "Bridal Jewelry", subtitle: "For Your Special Day", className: "col-span-1 row-span-1" },
-  { image: traditionalImg, title: "Maharashtrian Heritage", subtitle: "Thushi, Kolhapuri Saaj & More", className: "col-span-1 row-span-1" },
+  { image: maharashtrianImg, title: "Maharashtrian Heritage", subtitle: "Thushi, Kolhapuri Saaj & More", className: "col-span-1 row-span-1" },
   { image: heroImg, title: "Complete Sets", subtitle: "Curated Collections", className: "col-span-1 row-span-1" },
 ];
 

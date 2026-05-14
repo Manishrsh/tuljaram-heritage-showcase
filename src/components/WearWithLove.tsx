@@ -2,14 +2,14 @@ import { Link } from "react-router-dom";
 import bridalImg from "@/assets/bridal-necklace.jpg";
 import diamondImg from "@/assets/collection-diamond.jpg";
 import pearlImg from "@/assets/collection-pearl.jpg";
-import traditionalImg from "@/assets/collection-traditional.jpg";
+import maharashtrianImg from "@/assets/dsc9249.jpg";
 import polkiImg from "@/assets/collection-polki.jpg";
 
 const categories = [
   { title: "Daily Wear", subtitle: "Light & Lovely", image: pearlImg },
   { title: "Elevated Essentials", subtitle: "Diamond Classics", image: diamondImg },
   { title: "Heavy Occasion", subtitle: "Polki & Kundan", image: polkiImg },
-  { title: "Maharashtrian Heritage", subtitle: "Thushi, Saaj & More", image: traditionalImg },
+  { title: "Maharashtrian Heritage", subtitle: "Thushi, Saaj & More", image: maharashtrianImg },
   { title: "Bridal Wear", subtitle: "For Your Special Day", image: bridalImg },
 ];
 
