@@ -2,7 +2,8 @@ import Layout from "@/components/Layout";
 import bridalImg from "@/assets/bridal-necklace.jpg";
 import bridalDscImg from "@/assets/dsc9187.jpg";
 import diamondImg from "@/assets/collection-diamond.jpg";
-import diamondDscImg from "@/assets/dsc9410.jpg";
+import diamondDscImg from "@/assets/umo9632.jpg";
+import diamondDscImgTwo from "@/assets/dsc9406.jpg";
 import polkiImg from "@/assets/collection-polki.jpg";
 import traditionalImg from "@/assets/traditional-maharashtrian.jpg";
 import maharashtrianImgOne from "@/assets/dsc9249.jpg";
@@ -49,7 +50,7 @@ const sections: { id: string; eyebrow: string; title: string; description: strin
       "Solitaires, tennis bracelets, diamond chokers and everyday studs — radiant pieces for the woman who shines, every single day.",
     items: [
       { image: diamondDscImg, title: "Heera Solitaire", subtitle: "Certified Diamond" },
-      { image: necklaceImg, title: "Diamond Necklace", subtitle: "Statement Piece" },
+      { image: diamondDscImgTwo, title: "Diamond Necklace", subtitle: "Statement Piece" },
       { image: banglesImg, title: "Diamond Bracelet", subtitle: "Everyday Sparkle" },
     ],
   },

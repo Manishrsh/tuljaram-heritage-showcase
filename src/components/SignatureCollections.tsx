@@ -1,20 +1,21 @@
 import { Link } from "react-router-dom";
 import bridalImg from "@/assets/bridal-necklace.jpg";
-import polkiImg from "@/assets/collection-polki.jpg";
+import polkiImg from "@/assets/dsc9187.jpg";
 import traditionalImg from "@/assets/necklace-gold-pendant.jpg";
-import diamondImg from "@/assets/collection-diamond.jpg";
+import diamondImg from "@/assets/dsc9406.jpg";
 import pearlImg from "@/assets/collection-pearl.jpg";
 import mangalsutraImg from "@/assets/mangalsutra.jpg";
 import banglesImg from "@/assets/bangles.jpg";
 import necklaceImg from "@/assets/necklace.jpg";
 import lifestyleImg from "@/assets/lifestyle-modern.jpg";
+import maharashtrianImg from "@/assets/dsc9316.jpg";
 
 const collections = [
   {
     name: "Diamond Collection",
     tagline: "Brilliance Everyday",
     description:
-      "Where contemporary brilliance meets heritage craftsmanship — solitaire stories for the woman who wears her elegance every day.",
+      "Where contemporary brilliance meets heritage craftsmanship â€” solitaire stories for the woman who wears her elegance every day.",
     image: diamondImg,
   },
   {
@@ -28,8 +29,8 @@ const collections = [
     name: "Maharashtrian Collection",
     tagline: "Timeless Heritage",
     description:
-      "A regal homage to Maharashtra's timeless splendour — Thushi, Kolhapuri Saaj, Bormaal and more, crafted in pure gold with intricate hand-detailing.",
-    image: traditionalImg,
+      "A regal homage to Maharashtra's timeless splendour â€” Thushi, Kolhapuri Saaj, Bormaal and more, crafted in pure gold with intricate hand-detailing.",
+    image: maharashtrianImg,
   },
 ];
 
