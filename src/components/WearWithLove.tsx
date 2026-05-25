@@ -4,13 +4,18 @@ import diamondImg from "@/assets/collection-diamond.jpg";
 import pearlImg from "@/assets/collection-pearl.jpg";
 import maharashtrianImg from "@/assets/dsc9249.jpg";
 import polkiImg from "@/assets/collection-polki.jpg";
+import maharashtrianImg2 from "@/assets/dsc9316.jpg";
+import diamondDscImg from "@/assets/umo9632.jpg";
+import diamondDscImgTwo from "@/assets/dsc9406.jpg";
+import bridalDscImg from "../../assets/UMO_9401.JPG";
+
 
 const categories = [
-  { title: "Daily Wear", subtitle: "Light & Lovely", image: pearlImg },
-  { title: "Elevated Essentials", subtitle: "Diamond Classics", image: diamondImg },
-  { title: "Heavy Occasion", subtitle: "Polki & Kundan", image: polkiImg },
+  { title: "Daily Wear", subtitle: "Light & Lovely", image: diamondDscImg },
+  { title: "Elevated Essentials", subtitle: "Diamond Classics", image: diamondDscImgTwo },
+  { title: "Heavy Occasion", subtitle: "Polki & Kundan", image: maharashtrianImg2 },
   { title: "Maharashtrian Heritage", subtitle: "Thushi, Saaj & More", image: maharashtrianImg },
-  { title: "Bridal Wear", subtitle: "For Your Special Day", image: bridalImg },
+  { title: "Bridal Wear", subtitle: "For Your Special Day", image: bridalDscImg },
 ];
 
 const WearWithLove = () => {

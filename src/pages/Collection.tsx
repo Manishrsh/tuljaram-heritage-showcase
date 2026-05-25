@@ -4,6 +4,7 @@ import bridalDscImg from "@/assets/dsc9187.jpg";
 import diamondImg from "@/assets/collection-diamond.jpg";
 import diamondDscImg from "@/assets/umo9632.jpg";
 import diamondDscImgTwo from "@/assets/dsc9406.jpg";
+import diamondDscImgthree from "../../assets/UMO_9593.JPG";
 import polkiImg from "@/assets/collection-polki.jpg";
 import traditionalImg from "@/assets/traditional-maharashtrian.jpg";
 import maharashtrianImgOne from "@/assets/dsc9249.jpg";
@@ -14,7 +15,8 @@ import mangalsutraImg from "@/assets/mangalsutra.jpg";
 import banglesImg from "@/assets/bangles.jpg";
 import necklaceImg from "@/assets/necklace.jpg";
 import lifestyleImg from "@/assets/lifestyle-modern.jpg";
-
+import mangal2 from "../../assets/WHPS8981_0_r.jpg";
+import mangal3 from "../../assets/41.webp";
 type Item = { image: string; title: string; subtitle: string };
 
 const sections: { id: string; eyebrow: string; title: string; description: string; items: Item[] }[] = [
@@ -37,9 +39,9 @@ const sections: { id: string; eyebrow: string; title: string; description: strin
     description:
       "From classic black-bead heritage designs to modern minimalist pendants — mangalsutras for every bride, every story.",
     items: [
-      { image: mangalsutraImg, title: "Heritage Mangalsutra", subtitle: "Traditional Gold" },
-      { image: diamondImg, title: "Diamond Mangalsutra", subtitle: "Modern Minimal" },
-      { image: necklaceImg, title: "Layered Mangalsutra", subtitle: "Contemporary Edit" },
+      { image: maharashtrianImgThree, title: "Heritage Mangalsutra", subtitle: "Traditional Gold" },
+      { image: mangal3, title: "Diamond Mangalsutra", subtitle: "Modern Minimal" },
+      { image: mangal2, title: "Layered Mangalsutra", subtitle: "Contemporary Edit" },
     ],
   },
   {
@@ -51,7 +53,7 @@ const sections: { id: string; eyebrow: string; title: string; description: strin
     items: [
       { image: diamondDscImg, title: "Heera Solitaire", subtitle: "Certified Diamond" },
       { image: diamondDscImgTwo, title: "Diamond Necklace", subtitle: "Statement Piece" },
-      { image: banglesImg, title: "Diamond Bracelet", subtitle: "Everyday Sparkle" },
+      { image: diamondDscImgthree, title: "Diamond Bracelet", subtitle: "Everyday Sparkle" },
     ],
   },
   {
@@ -78,42 +80,42 @@ const sections: { id: string; eyebrow: string; title: string; description: strin
       { image: maharashtrianImgThree, title: "Thushi", subtitle: "Pure Gold Heritage" },
     ],
   },
-  {
-    id: "pearl",
-    eyebrow: "Quiet Luxury",
-    title: "Pearl & Real Stones",
-    description:
-      "Pearl-strung haars, ruby and emerald sets, and real-stone earrings — softness, colour and timeless grace.",
-    items: [
-      { image: pearlImg, title: "Pearl Haar", subtitle: "South Sea Pearl" },
-      { image: necklaceImg, title: "Ruby & Emerald Set", subtitle: "Real Stones" },
-      { image: bridalImg, title: "Pearl Drop Earrings", subtitle: "Everyday Elegance" },
-    ],
-  },
-  {
-    id: "bangles",
-    eyebrow: "Circle of Tradition",
-    title: "Bangles & Bracelets",
-    description:
-      "Pure gold bangles, diamond tennis bracelets, kada and dainty everyday stacks — pieces that move with you.",
-    items: [
-      { image: banglesImg, title: "Gold Bangles", subtitle: "Pure 22kt" },
-      { image: diamondImg, title: "Diamond Tennis", subtitle: "Bracelet" },
-      { image: necklaceImg, title: "Kada", subtitle: "Statement Bangle" },
-    ],
-  },
-  {
-    id: "daily-wear",
-    eyebrow: "Lightweight Luxe",
-    title: "Daily Wear",
-    description:
-      "Effortless lightweight gold and diamond jewellery designed for everyday — refined enough for work, elegant for evenings.",
-    items: [
-      { image: lifestyleImg, title: "Daily Studs", subtitle: "Lightweight Diamond" },
-      { image: necklaceImg, title: "Office Pendant", subtitle: "Minimal Gold" },
-      { image: banglesImg, title: "Stacking Bangles", subtitle: "Everyday Edit" },
-    ],
-  },
+  // {
+  //   id: "pearl",
+  //   eyebrow: "Quiet Luxury",
+  //   title: "Pearl & Real Stones",
+  //   description:
+  //     "Pearl-strung haars, ruby and emerald sets, and real-stone earrings — softness, colour and timeless grace.",
+  //   items: [
+  //     { image: pearlImg, title: "Pearl Haar", subtitle: "South Sea Pearl" },
+  //     { image: necklaceImg, title: "Ruby & Emerald Set", subtitle: "Real Stones" },
+  //     { image: bridalImg, title: "Pearl Drop Earrings", subtitle: "Everyday Elegance" },
+  //   ],
+  // },
+  // {
+  //   id: "bangles",
+  //   eyebrow: "Circle of Tradition",
+  //   title: "Bangles & Bracelets",
+  //   description:
+  //     "Pure gold bangles, diamond tennis bracelets, kada and dainty everyday stacks — pieces that move with you.",
+  //   items: [
+  //     { image: banglesImg, title: "Gold Bangles", subtitle: "Pure 22kt" },
+  //     { image: diamondImg, title: "Diamond Tennis", subtitle: "Bracelet" },
+  //     { image: necklaceImg, title: "Kada", subtitle: "Statement Bangle" },
+  //   ],
+  // },
+  // {
+  //   id: "daily-wear",
+  //   eyebrow: "Lightweight Luxe",
+  //   title: "Daily Wear",
+  //   description:
+  //     "Effortless lightweight gold and diamond jewellery designed for everyday — refined enough for work, elegant for evenings.",
+  //   items: [
+  //     { image: lifestyleImg, title: "Daily Studs", subtitle: "Lightweight Diamond" },
+  //     { image: necklaceImg, title: "Office Pendant", subtitle: "Minimal Gold" },
+  //     { image: banglesImg, title: "Stacking Bangles", subtitle: "Everyday Edit" },
+  //   ],
+  // },
 ];
 
 const CollectionPage = () => {

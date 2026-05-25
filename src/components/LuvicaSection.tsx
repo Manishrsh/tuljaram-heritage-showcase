@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import luvicaImg from "@/assets/luvica-sparkle.jpg";
+import luvicaImg from "@/assets/umo9632.jpg";
 import polkiImg from "@/assets/collection-polki.jpg";
 
 const LuvicaSection = () => {
@@ -16,19 +16,19 @@ const LuvicaSection = () => {
           <div className="relative">
             <div className="aspect-[4/5] overflow-hidden">
               <img
-                src={polkiImg}
+                src={luvicaImg}
                 alt="Luvica by Tuljaram Saraf — diamond and kundan jewellery"
                 className="w-full h-full object-cover"
                 loading="lazy"
               />
             </div>
-            <img
+            {/* <img
               src={luvicaImg}
               alt=""
               aria-hidden="true"
               className="absolute -top-8 -right-6 w-24 md:w-32 opacity-90"
               loading="lazy"
-            />
+            /> */}
           </div>
 
           <div>
