@@ -29,7 +29,7 @@ const HeroSection = () => {
               Tuljaram Saraf · Since 1911
             </p>
             <h1
-              className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light leading-[1.1] mb-8 animate-fade-in"
+              className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light leading-[1.15] mb-6 animate-fade-in"
               style={{ animationDelay: "0.4s", opacity: 0, animationFillMode: "forwards" }}
             >
               Every piece tells
@@ -38,28 +38,28 @@ const HeroSection = () => {
               <br />
               make one yours.
               <br />
-              <span className="text-2xl md:text-3xl lg:text-4xl text-gold-light/90 not-italic">115 years. Crafted. Trusted. Yours.</span>
+              <span className="text-lg md:text-xl lg:text-2xl text-gold-light/90 not-italic">115 years. Crafted. Trusted. Yours.</span>
             </h1>
             <p
-              className="font-body text-lg md:text-xl text-primary-foreground/85 leading-relaxed mb-10 max-w-xl animate-fade-in"
+              className="font-body text-base md:text-lg text-primary-foreground/85 leading-relaxed mb-8 max-w-xl animate-fade-in"
               style={{ animationDelay: "0.7s", opacity: 0, animationFillMode: "forwards" }}
             >
               More than jewellery — a statement of you. Crafted at Chhatrapati Sambhaji
               Maharaj Chowk, Ichalkaranji, for over a century.
             </p>
             <div
-              className="flex flex-col sm:flex-row gap-4 animate-fade-in"
+              className="flex flex-col sm:flex-row gap-3 animate-fade-in"
               style={{ animationDelay: "1s", opacity: 0, animationFillMode: "forwards" }}
             >
               <Link
                 to="/collection"
-                className="bg-gold text-foreground font-accent text-sm tracking-[0.25em] uppercase px-10 py-4 hover:bg-gold-dark transition-colors text-center"
+                className="bg-gold text-foreground font-accent text-xs tracking-[0.2em] uppercase px-6 py-3 hover:bg-gold-dark transition-colors text-center"
               >
                 Explore Collection
               </Link>
               <Link
                 to="/our-story"
-                className="border border-gold-light/70 text-gold-light font-accent text-sm tracking-[0.25em] uppercase px-10 py-4 hover:bg-gold/10 transition-colors text-center"
+                className="border border-gold-light/70 text-gold-light font-accent text-xs tracking-[0.2em] uppercase px-6 py-3 hover:bg-gold/10 transition-colors text-center"
               >
                 Our Heritage
               </Link>
