@@ -85,13 +85,13 @@ const ContactPage = () => {
               </div>
             </a>
 
-            <a href="mailto:info@tuljaramsaraf.com" className="flex items-center gap-4 p-6 bg-card border border-border rounded-sm hover-lift">
+            <a href="mailto:dishantshah2141@gmail.com" className="flex items-center gap-4 p-6 bg-card border border-border rounded-sm hover-lift">
               <div className="w-14 h-14 rounded-full flex items-center justify-center bg-primary/10 shrink-0">
                 <Mail size={24} className="text-primary" />
               </div>
               <div>
                 <h3 className="font-display text-lg font-semibold text-foreground">Email</h3>
-                <p className="font-body text-base text-muted-foreground">info@tuljaramsaraf.com</p>
+                <p className="font-body text-base text-muted-foreground">dishantshah2141@gmail.com</p>
               </div>
             </a>
           </div>
@@ -105,10 +105,10 @@ const ContactPage = () => {
               For new launches, bridal stories and behind-the-scenes from the atelier.
             </p>
             <div className="flex justify-center gap-6">
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="w-14 h-14 rounded-full border border-gold/40 flex items-center justify-center hover:bg-gold/10 transition-colors hover-lift">
+              <a href="https://www.instagram.com/tuljaram_saraf?igsh=MWptcmMzYzVxN3UxZg==" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="w-14 h-14 rounded-full border border-gold/40 flex items-center justify-center hover:bg-gold/10 transition-colors hover-lift">
                 <Instagram size={24} className="text-gold" />
               </a>
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="w-14 h-14 rounded-full border border-gold/40 flex items-center justify-center hover:bg-gold/10 transition-colors hover-lift">
+              <a href="https://www.facebook.com/profile.php?id=61591673752968" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="w-14 h-14 rounded-full border border-gold/40 flex items-center justify-center hover:bg-gold/10 transition-colors hover-lift">
                 <Facebook size={24} className="text-gold" />
               </a>
               <a href="https://wa.me/917588267387" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" className="w-14 h-14 rounded-full border border-gold/40 flex items-center justify-center hover:bg-gold/10 transition-colors hover-lift">

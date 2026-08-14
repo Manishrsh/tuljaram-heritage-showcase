@@ -11,7 +11,6 @@ import Collection from "./pages/Collection";
 import Craftsmanship from "./pages/Craftsmanship";
 import Store from "./pages/Store";
 import Trust from "./pages/Trust";
-import Visit from "./pages/Visit";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
@@ -39,7 +38,6 @@ const App = () => (
           <Route path="/craftsmanship" element={<Craftsmanship />} />
           <Route path="/store" element={<Store />} />
           <Route path="/trust" element={<Trust />} />
-          <Route path="/visit" element={<Visit />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
