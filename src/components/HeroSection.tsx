@@ -5,7 +5,7 @@ const HeroSection = () => {
   return (
     <section
       id="home"
-      className="relative min-h-[75vh] flex items-center overflow-hidden bg-foreground py-16 md:py-20"
+      className="relative min-h-[60vh] flex items-center overflow-hidden bg-foreground py-16 md:py-20"
     >
       {/* Background image */}
       <div className="absolute inset-0">
