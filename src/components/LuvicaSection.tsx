@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import luvicaImg from "@/assets/umo9632.jpg";
 import polkiImg from "@/assets/collection-polki.jpg";
 
-const LuvicaSection = () => {
+const LuvicaaSection = () => {
   return (
     <section className="relative bg-foreground text-primary-foreground overflow-hidden">
       {/* decorative gradient */}
@@ -17,7 +17,7 @@ const LuvicaSection = () => {
             <div className="aspect-[4/5] overflow-hidden">
               <img
                 src={luvicaImg}
-                alt="Luvica by Tuljaram Saraf — diamond and kundan jewellery"
+                alt="Luvicaa by Tuljaram Saraf — diamond and kundan jewellery"
                 className="w-full h-full object-cover"
                 loading="lazy"
               />
@@ -33,7 +33,7 @@ const LuvicaSection = () => {
 
           <div>
             <p className="font-accent text-xs md:text-sm tracking-[0.45em] uppercase text-gold-light mb-6">
-              Luvica · By Tuljaram Saraf
+              Luvicaa · By Tuljaram Saraf
             </p>
             <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-light leading-tight mb-8">
               Unveiling <span className="italic gold-text">Elegance</span> ✨
@@ -42,7 +42,7 @@ const LuvicaSection = () => {
 
             <p className="font-body text-lg md:text-xl text-primary-foreground/85 leading-relaxed mb-6">
               Crafted in diamonds, pearls, kundan, and fine stones —{" "}
-              <em className="text-gold-light">Luvica</em> blends timeless tradition with
+              <em className="text-gold-light">Luvicaa</em> blends timeless tradition with
               modern grace.
             </p>
             <p className="font-display italic text-xl md:text-2xl text-gold-light mb-10">
@@ -53,7 +53,7 @@ const LuvicaSection = () => {
               to="/collection"
               className="inline-block bg-gold text-foreground font-accent text-sm tracking-[0.3em] uppercase px-10 py-4 hover:bg-gold-dark transition-colors"
             >
-              Discover Luvica
+              Discover Luvicaa
             </Link>
           </div>
         </div>
@@ -62,4 +62,4 @@ const LuvicaSection = () => {
   );
 };
 
-export default LuvicaSection;
+export default LuvicaaSection;

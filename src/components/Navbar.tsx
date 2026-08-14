@@ -10,7 +10,6 @@ const navLinks = [
   { label: "Craftsmanship", to: "/craftsmanship" },
   { label: "Our Store", to: "/store" },
   { label: "Trust", to: "/trust" },
-  { label: "Visit Us", to: "/visit" },
   { label: "Contact", to: "/contact" },
 ];
 

@@ -38,7 +38,7 @@ const VisitCta = () => {
         </div>
 
         <Link
-          to="/visit"
+          to="/contact"
           className="inline-block bg-gold text-foreground font-accent text-sm tracking-[0.3em] uppercase px-12 py-4 hover:bg-gold-dark transition-colors"
         >
           Plan Your Visit

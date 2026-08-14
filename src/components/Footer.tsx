@@ -13,10 +13,10 @@ const Footer = () => {
               Since 1911 · Ichalkaranji
             </p>
             <div className="flex gap-4">
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-gold/30 flex items-center justify-center hover:bg-gold/10 transition-colors">
+              <a href="https://www.instagram.com/tuljaram_saraf?igsh=MWptcmMzYzVxN3UxZg==" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-gold/30 flex items-center justify-center hover:bg-gold/10 transition-colors">
                 <Instagram size={18} className="text-gold" />
               </a>
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-gold/30 flex items-center justify-center hover:bg-gold/10 transition-colors">
+              <a href="https://www.facebook.com/profile.php?id=61591673752968" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-gold/30 flex items-center justify-center hover:bg-gold/10 transition-colors">
                 <Facebook size={18} className="text-gold" />
               </a>
             </div>
@@ -31,7 +31,7 @@ const Footer = () => {
                 { label: "Our Story", to: "/our-story" },
                 { label: "Collection", to: "/collection" },
                 { label: "Craftsmanship", to: "/craftsmanship" },
-                { label: "Visit Us", to: "/visit" },
+                { label: "Contact", to: "/contact" },
               ].map((link) => (
                 <Link key={link.to} to={link.to} className="font-body text-sm text-primary-foreground/60 hover:text-gold transition-colors">
                   {link.label}
