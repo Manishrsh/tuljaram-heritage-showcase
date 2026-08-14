@@ -7,7 +7,7 @@ import polkiImg from "@/assets/collection-polki.jpg";
 import maharashtrianImg2 from "@/assets/dsc9316.jpg";
 import diamondDscImg from "@/assets/umo9632.jpg";
 import diamondDscImgTwo from "@/assets/dsc9406.jpg";
-import bridalDscImg from "../../assets/UMO_9401.JPG";
+import bridalDscImg from "@/assets/bridal-necklace.jpg";
 
 
 const categories = [

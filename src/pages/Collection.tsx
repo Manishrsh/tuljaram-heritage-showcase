@@ -4,7 +4,7 @@ import bridalDscImg from "@/assets/dsc9187.jpg";
 import diamondImg from "@/assets/collection-diamond.jpg";
 import diamondDscImg from "@/assets/umo9632.jpg";
 import diamondDscImgTwo from "@/assets/dsc9406.jpg";
-import diamondDscImgthree from "../../assets/UMO_9593.JPG";
+import diamondDscImgthree from "@/assets/bangles.jpg";
 import polkiImg from "@/assets/collection-polki.jpg";
 import traditionalImg from "@/assets/traditional-maharashtrian.jpg";
 import maharashtrianImgOne from "@/assets/dsc9249.jpg";
@@ -15,8 +15,8 @@ import mangalsutraImg from "@/assets/mangalsutra.jpg";
 import banglesImg from "@/assets/bangles.jpg";
 import necklaceImg from "@/assets/necklace.jpg";
 import lifestyleImg from "@/assets/lifestyle-modern.jpg";
-import mangal2 from "../../assets/WHPS8981_0_r.jpg";
-import mangal3 from "../../assets/41.webp";
+import mangal2 from "@/assets/necklace-gold-pendant.jpg";
+import mangal3 from "@/assets/mangalsutra.jpg";
 type Item = { image: string; title: string; subtitle: string };
 
 const sections: { id: string; eyebrow: string; title: string; description: string; items: Item[] }[] = [
