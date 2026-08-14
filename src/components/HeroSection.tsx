@@ -5,7 +5,7 @@ const HeroSection = () => {
   return (
     <section
       id="home"
-      className="relative h-[75vh] min-h-[75vh] flex items-center overflow-hidden bg-foreground"
+      className="relative min-h-[75vh] flex items-center overflow-hidden bg-foreground py-16 md:py-20"
     >
       {/* Background image */}
       <div className="absolute inset-0">
@@ -23,13 +23,13 @@ const HeroSection = () => {
         <div className="container mx-auto max-w-7xl px-6 md:px-12">
           <div className="max-w-2xl text-primary-foreground">
             <p
-              className="font-accent text-xs md:text-sm tracking-[0.45em] uppercase text-gold-light mb-6 animate-fade-in"
+              className="font-accent text-[10px] sm:text-xs md:text-sm tracking-[0.35em] sm:tracking-[0.45em] uppercase text-gold-light mb-3 sm:mb-4 md:mb-5 animate-fade-in"
               style={{ animationDelay: "0.2s", opacity: 0, animationFillMode: "forwards" }}
             >
               Tuljaram Saraf · Since 1911
             </p>
             <h1
-              className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light leading-[1.15] mb-6 animate-fade-in"
+              className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-light leading-[1.1] sm:leading-[1.12] md:leading-[1.15] mb-3 sm:mb-4 md:mb-5 animate-fade-in"
               style={{ animationDelay: "0.4s", opacity: 0, animationFillMode: "forwards" }}
             >
               Every piece tells
@@ -38,28 +38,28 @@ const HeroSection = () => {
               <br />
               make one yours.
               <br />
-              <span className="text-lg md:text-xl lg:text-2xl text-gold-light/90 not-italic">115 years. Crafted. Trusted. Yours.</span>
+              <span className="text-sm sm:text-base md:text-lg lg:text-xl text-gold-light/90 not-italic">115 years. Crafted. Trusted. Yours.</span>
             </h1>
             <p
-              className="font-body text-base md:text-lg text-primary-foreground/85 leading-relaxed mb-8 max-w-xl animate-fade-in"
+              className="font-body text-sm sm:text-base md:text-base lg:text-lg text-primary-foreground/85 leading-relaxed mb-5 sm:mb-6 md:mb-7 max-w-xl animate-fade-in"
               style={{ animationDelay: "0.7s", opacity: 0, animationFillMode: "forwards" }}
             >
               More than jewellery — a statement of you. Crafted at Chhatrapati Sambhaji
               Maharaj Chowk, Ichalkaranji, for over a century.
             </p>
             <div
-              className="flex flex-col sm:flex-row gap-3 animate-fade-in"
+              className="flex flex-col sm:flex-row gap-2 sm:gap-3 animate-fade-in"
               style={{ animationDelay: "1s", opacity: 0, animationFillMode: "forwards" }}
             >
               <Link
                 to="/collection"
-                className="bg-gold text-foreground font-accent text-xs tracking-[0.2em] uppercase px-6 py-3 hover:bg-gold-dark transition-colors text-center"
+                className="bg-gold text-foreground font-accent text-[10px] sm:text-xs tracking-[0.15em] sm:tracking-[0.2em] uppercase px-4 sm:px-6 py-2.5 sm:py-3 hover:bg-gold-dark transition-colors text-center"
               >
                 Explore Collection
               </Link>
               <Link
                 to="/our-story"
-                className="border border-gold-light/70 text-gold-light font-accent text-xs tracking-[0.2em] uppercase px-6 py-3 hover:bg-gold/10 transition-colors text-center"
+                className="border border-gold-light/70 text-gold-light font-accent text-[10px] sm:text-xs tracking-[0.15em] sm:tracking-[0.2em] uppercase px-4 sm:px-6 py-2.5 sm:py-3 hover:bg-gold/10 transition-colors text-center"
               >
                 Our Heritage
               </Link>
@@ -68,8 +68,8 @@ const HeroSection = () => {
         </div>
 
         {/* Scroll cue line */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-2 text-gold-light/80">
-          <span className="block w-px h-10 bg-gradient-to-b from-gold-light/80 to-transparent" />
+        <div className="absolute bottom-6 sm:bottom-8 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-2 text-gold-light/80">
+          <span className="block w-px h-8 sm:h-10 bg-gradient-to-b from-gold-light/80 to-transparent" />
         </div>
       </div>
     </section>
