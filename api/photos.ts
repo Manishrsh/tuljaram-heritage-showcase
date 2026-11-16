@@ -1,5 +1,6 @@
 import { list, put } from "@vercel/blob";
 import { handleUpload } from "@vercel/blob/client";
+import process from "node:process";
 
 const MANIFEST_PATH = "photo-overrides/manifest.json";
 const PHOTO_TYPES = ["image/jpeg", "image/png", "image/webp", "image/gif"];
@@ -18,17 +19,29 @@ async function readManifest(): Promise<Record<string, string>> {
   return response.json() as Promise<Record<string, string>>;
 }
 
-export default async function handler(request: Request): Promise<Response> {
-  if (request.method === "GET") {
+export default async function handler(req: any, res: any) {
+  if (req.method === "GET") {
     try {
-      return Response.json(await readManifest(), { headers: { "Cache-Control": "no-store" } });
+      return res.status(200).setHeader("Cache-Control", "no-store").json(await readManifest());
     } catch {
-      return Response.json({ error: "Photo storage is not configured" }, { status: 503 });
+      return res.status(503).json({ error: "Photo storage is not configured" });
     }
   }
-  if (request.method !== "POST") return new Response("Method not allowed", { status: 405 });
+  if (req.method !== "POST") return res.status(405).send("Method not allowed");
   try {
-    const body = await request.json();
+    const body = req.body || {};
+    const protocol = req.headers["x-forwarded-proto"] || "http";
+    const host = req.headers["x-forwarded-host"] || req.headers.host || "localhost";
+    const headers = new Headers();
+    for (const [name, value] of Object.entries(req.headers)) {
+      if (typeof value === "string") headers.set(name, value);
+      else if (Array.isArray(value)) headers.set(name, value.join(", "));
+    }
+    const request = new Request(`${protocol}://${host}${req.url || "/api/photos"}`, {
+      method: "POST",
+      headers,
+      body: JSON.stringify(body),
+    });
     const result = await handleUpload({
       body,
       request,
@@ -60,9 +73,9 @@ export default async function handler(request: Request): Promise<Response> {
         await put(MANIFEST_PATH, JSON.stringify(manifest), { access: "public", addRandomSuffix: false, allowOverwrite: true, contentType: "application/json" });
       },
     });
-    return Response.json(result);
+    return res.status(200).json(result);
   } catch (error) {
     console.error("Photo upload failed", error);
-    return Response.json({ error: error instanceof Error ? error.message : "Photo upload failed. Check Vercel Blob configuration." }, { status: 400 });
+    return res.status(400).json({ error: error instanceof Error ? error.message : "Photo upload failed. Check Vercel Blob configuration." });
   }
 }
