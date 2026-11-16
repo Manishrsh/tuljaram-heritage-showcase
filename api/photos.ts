@@ -1,7 +1,7 @@
 import { list, put } from "@vercel/blob";
 import { handleUpload } from "@vercel/blob/client";
 import process from "node:process";
-
+import { verifySession } from "../server/auth.js";
 const MANIFEST_PATH = "photo-overrides/manifest.json";
 const PHOTO_TYPES = ["image/jpeg", "image/png", "image/webp", "image/gif"];
 const VIDEO_TYPES = ["video/mp4"];
@@ -46,10 +46,18 @@ export default async function handler(req: any, res: any) {
       body,
       request,
       onBeforeGenerateToken: async (pathname, clientPayload) => {
-        const session = request.headers.get("cookie")?.split(";").map((part) => part.trim()).find((part) => part.startsWith("admin_session="))?.slice("admin_session=".length);
+        const session = request.headers
+          .get("cookie")
+          ?.split(";")
+          .map((part) => part.trim())
+          .find((part) => part.startsWith("admin_session="))
+          ?.slice("admin_session=".length);
+
         const secret = process.env.ADMIN_SESSION_SECRET;
-        const { verifySession } = await import("../server/auth");
-        if (!session || !secret || !verifySession(session, secret)) throw new Error("Sign in required");
+
+        if (!session || !secret || !verifySession(session, secret)) {
+          throw new Error("Sign in required");
+        }
         const payload = JSON.parse(clientPayload ?? "{}") as { slot?: string; kind?: string };
         const extension = pathname.split(".").pop()?.toLowerCase();
         if (!payload.slot || !/^[a-z0-9-]{1,80}$/.test(payload.slot) || !payload.kind || !VALID_EXTENSIONS[payload.kind]?.includes(extension ?? "")) {
