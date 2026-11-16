@@ -1,7 +1,7 @@
 
 import { createHash, timingSafeEqual } from "node:crypto";
 import process from "node:process";
-import { signSession, verifySession } from "../../server/auth";
+import { signSession, verifySession } from "../../server/auth.js";
 
 export default async function handler(req: any, res: any) {
   const cookieHeader = req.headers.cookie || "";
