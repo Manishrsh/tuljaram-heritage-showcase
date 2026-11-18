@@ -14,6 +14,7 @@ export default function Admin() {
   const [busy, setBusy] = useState(false);
   const [message, setMessage] = useState("");
   const [progress, setProgress] = useState(0);
+  const [uploadStage, setUploadStage] = useState<"uploading" | "publishing" | null>(null);
   const isVideo = videoSlots.includes(slot);
 
   const loadOverrides = async () => {
@@ -73,19 +74,32 @@ export default function Admin() {
     if (!allowedTypes.includes(file.type)) { setMessage(`Choose a supported ${isVideo ? "MP4 video" : "photo file"}.`); return; }
     const extension = file.type === "image/jpeg" ? "jpg" : file.type.split("/")[1];
     setBusy(true); setMessage("");
+    setProgress(0); setUploadStage("uploading");
     try {
       const result = await uploadToBlob(`photo-overrides/${slot}.${extension}`, file, {
         access: "public",
+        contentType: file.type,
         handleUploadUrl: "/api/photos",
         clientPayload: JSON.stringify({ slot, kind: isVideo ? "video" : "image" }),
         multipart: isVideo,
         onUploadProgress: ({ percentage }) => setProgress(Math.round(percentage)),
       });
-      setOverrides((current) => ({ ...current, [slot]: `${result.url}?v=${Date.now()}` })); setFile(null); setProgress(0);
+      setProgress(100); setUploadStage("publishing");
+      const publishResponse = await fetch("/api/photos", {
+        method: "POST",
+        credentials: "include",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ action: "publish", slot, url: result.url }),
+      });
+      const publishResult = await publishResponse.json();
+      if (!publishResponse.ok) throw new Error(publishResult.error || "Upload completed, but publishing failed");
+      setOverrides((current) => ({ ...current, [slot]: `${result.url}?v=${Date.now()}` })); setFile(null);
       const input = document.getElementById("media-file") as HTMLInputElement | null; if (input) input.value = "";
       setMessage(`${isVideo ? "Video" : "Photo"} updated. Refresh the public site to see the replacement.`);
-    } catch (error) { setMessage(error instanceof Error ? error.message : "Upload failed"); }
-    finally { setBusy(false); }
+    } catch (error) {
+      setMessage(error instanceof Error ? error.message : "Upload failed");
+      setProgress(0);
+    } finally { setBusy(false); setUploadStage(null); }
   };
 
   if (checking) return <main className="min-h-screen grid place-items-center bg-stone-950 text-stone-100">Loading admin…</main>;
@@ -107,7 +121,7 @@ export default function Admin() {
           <select id="slot" value={slot} onChange={(event) => { setSlot(event.target.value); setFile(null); }} className="mb-5 w-full rounded-md border border-stone-700 bg-stone-950 px-3 py-2">{mediaSlots.map((item) => <option key={item} value={item}>{item.replaceAll("-", " ")} ({videoSlots.includes(item) ? "video" : "photo"})</option>)}</select>
           <label htmlFor="media-file" className="mb-2 block text-sm text-stone-300">New {isVideo ? "video" : "photo"}</label>
           <input id="media-file" type="file" accept={isVideo ? "video/mp4" : "image/jpeg,image/png,image/webp,image/gif"} required onChange={(event) => setFile(event.target.files?.[0] ?? null)} className="mb-6 block w-full text-sm text-stone-300 file:mr-4 file:rounded-md file:border-0 file:bg-stone-700 file:px-4 file:py-2 file:text-stone-100" />
-          <button type="button" onClick={() => void upload()} disabled={busy || !file} className="rounded-md bg-amber-500 px-5 py-2 font-medium text-stone-950 disabled:opacity-60">{busy ? `Uploading ${progress}%…` : "Upload and publish"}</button>
+          <button type="button" onClick={() => void upload()} disabled={busy || !file} className="rounded-md bg-amber-500 px-5 py-2 font-medium text-stone-950 disabled:opacity-60">{busy ? uploadStage === "publishing" ? "Publishing…" : `Uploading ${progress}%…` : "Upload and publish"}</button>
           {message && <p role="status" className="mt-4 text-sm text-amber-200">{message}</p>}
         </form>
         <section><h2 className="mb-4 text-xl">Current replacements</h2><div className="grid grid-cols-2 gap-3">{Object.entries(overrides).length ? Object.entries(overrides).map(([key, url]) => <article key={key} className="overflow-hidden rounded-lg border border-stone-800 bg-stone-900">{videoSlots.includes(key) ? <video src={url} controls className="aspect-square w-full object-cover" /> : <img src={url} alt={key.replaceAll("-", " ")} className="aspect-square w-full object-cover" />}<p className="p-3 text-sm capitalize">{key.replaceAll("-", " ")}</p></article>) : <p className="text-sm text-stone-400">No media replaced yet.</p>}</div></section>
