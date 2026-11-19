@@ -41,18 +41,18 @@ npm run build
 npm test
 ```
 
-## Admin photo manager on Vercel
+## Admin media manager on Vercel
 
-The `/admin` page lets an administrator replace site photos and MP4 videos, including the reels. The site uses Vercel Functions for its Node.js API and Vercel Blob for persistent media storage. Uploaded media and replacements survive new frontend deployments.
+The `/admin` page lets an administrator replace site photos and MP4 videos, including the reels. The site uses Vercel Functions for its Node.js API and PostgreSQL for persistent media storage. Uploads are sent as base64-encoded chunks, decoded to binary, and stored in PostgreSQL `BYTEA` rows. Videos are served with HTTP range support so browser playback and seeking work.
 
 1. Import this project into Vercel and keep the project root at the repository root. Vercel builds the Vite frontend and deploys the `api/` functions alongside it.
-2. In the Vercel project, open **Storage**, create a **Blob** store, and connect it to the project. Enable a read-write token so `BLOB_READ_WRITE_TOKEN` is available; browser uploads use it to send large video files directly to Blob.
-3. In **Settings → Environment Variables**, add `ADMIN_PASSWORD` (a long, unique password) and `ADMIN_SESSION_SECRET` (a separate random secret of at least 32 characters). Apply both to Production and Preview as needed, then redeploy.
-4. Open `https://your-domain.vercel.app/admin`, sign in with `ADMIN_PASSWORD`, choose a media location, and upload a replacement. Photos can be up to 4 MB and MP4 videos up to 500 MB.
+2. Create a PostgreSQL database and set `DATABASE_URL` in the Vercel project environment variables. Use the provider's SSL-enabled connection string and allow connections from your deployment. The API creates its media tables automatically on first use.
+3. In **Settings → Environment Variables**, add `ADMIN_PASSWORD` (a long, unique password) and `ADMIN_SESSION_SECRET` (a separate random secret of at least 32 characters). Apply all variables to Production and Preview as needed, then redeploy.
+4. Open `https://your-domain.vercel.app/admin`, sign in with `ADMIN_PASSWORD`, choose a media location, and upload a replacement. Photos can be up to 4 MB and MP4 videos up to 500 MB; the client sends 768 KiB chunks to stay within Vercel Function request limits.
 
-The public site reads saved overrides from the API on page load. To test locally, install the Vercel CLI, link this folder to the Vercel project, pull its Development environment with `vercel env pull .env.local`, and run `vercel dev`. The regular Vite dev server does not run the Node API functions. Client uploads require Vercel Blob to call the API after the file transfer; localhost is not reachable by Blob. Expose the local `vercel dev` port through a public HTTPS tunnel such as ngrok, then set `VERCEL_BLOB_CALLBACK_URL` in `.env.local` to the tunnel URL ending in `/api/photos` (for example, `https://example.ngrok-free.app/api/photos`). Keep using the local app URL in your browser; the tunnel URL is only for the Blob completion callback. Restart `vercel dev` after changing the environment variable. Without a tunnel, use the deployed preview or production URL to test uploads.
+The public site reads saved overrides from the API on page load. To test locally, set `DATABASE_URL`, `ADMIN_PASSWORD`, and `ADMIN_SESSION_SECRET`, install the Vercel CLI, and run `vercel dev`; the regular Vite dev server does not run the Node API functions. Configure the database to allow connections from the local machine as well as Vercel if you need local uploads.
 
-Admin media replacement requires a Vercel deployment with Blob connected. The regular Vite static build does not run the Node API functions.
+The media manager's **Remove** action deletes the stored replacement and restores the original bundled asset. PostgreSQL must have enough storage and connection capacity for your media library; database backups should be enabled for production.
 
 ## Technologies Used
 
